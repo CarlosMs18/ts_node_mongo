@@ -1,0 +1,33 @@
+{
+  "name": "ts_node_mongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist/",
+    "dev": "concurrently \"tsc -w\" \"nodemon dist/index.js\" ",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosMs18/ts_node_mongo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlosMs18/ts_node_mongo/issues"
+  },
+  "homepage": "https://github.com/CarlosMs18/ts_node_mongo#readme",
+  "dependencies": {
+    "concurrently": "^7.2.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.5",
+    "nodemon": "^2.0.16"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.3"
+  }
+}
