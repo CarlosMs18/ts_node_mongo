@@ -1,6 +1,8 @@
 import express,{Application} from 'express'
+import morgan from 'morgan'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
+
 dotenv.config()
 
 import AuthRoutes from './routes/auth.routes'
@@ -12,7 +14,10 @@ const PORT = process.env.PORT
 
 app.use(express.json())
 
+app.use(morgan('dev'))
+
 app.use('/api/auth',AuthRoutes)
+
 
 
 
