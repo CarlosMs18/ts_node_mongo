@@ -12,7 +12,7 @@ interface IPayload{
 const isAuth = (req:Request, res:Response, next:NextFunction) => {
     const tokenHeader = req.get('x-token')
     if(!tokenHeader){
-        return res.status(404).json({message:'No hay un toen en la peticion'})
+        return res.status(404).json({message:'No hay un token en la peticion'})
     }
 
     let decodedToken;
